@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.article {
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+button {
+    border: darkgreen 2px solid;
+    color: darkgreen;
+    text-transform: uppercase;
+    height: 30px;
+    width: 90px;
+    background-color: darkseagreen;
+    cursor: pointer;
+}
+
+.article.blur {
+    filter: blur(2px);
+}
+
+img {
+    padding: 50px 0;
+    width: 100%;
+}
+
+.modal.wrap {
+    display: none;
+
+}
+
+.modal-wrap.active {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(18, 61, 26, 0.5);
+}
+
+
+.modal-wrap.active .modal {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 70%;
+    border: darkgreen 2px solid;
+}
+
+@media (max-width:800px) {
+    .modal-wrap.active .modal {
+        width: 90%;
+        height: 90%;
+    }
+}
+
+
+.modal .top {
+    flex-basis: 15%;
+    background-color: rgb(74, 144, 86);
+}
+
+.modal .middle {
+    flex-grow: 1;
+    background-color: darkseagreen;
+}
+
+.modal .bottom {
+    flex-basis: 10%;
+    background-color: rgb(74, 144, 86);
+}
+
+span {
+    display: none;
+}
+
+span.on {
+    display: block;
+    font-size: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    color: darkgreen;
+    background-color: rgb(186, 196, 186);
+    border-radius: 50%;
+    line-height: 28px;
+    cursor: pointer;
+}
